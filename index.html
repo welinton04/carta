@@ -1,11 +1,11 @@
 <!-- html -->
 <!DOCTYPE html>
 <html lang="es">
-<head >
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Carta para Mamá</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body> 
@@ -13,17 +13,17 @@
         <div class="card-inner">
             <div class="card-face card-front">
                 <div class="envelope"></div>
-                <h1>Feliz Día de la Madre </h1>
+                <h1>Feliz Día de la Madre</h1>
                 <p>Haz clic para descubrir cuánto te amo...</p>
                 <button class="open-btn">Abrir Carta</button>
                 <div class="img-mother">
-                    <img src="./img/img.png" alt="description"/>
+                    <img src="./img/img.png" alt="Imagen decorativa"/>
                 </div>
             </div>
             
             <div class="card-face card-back">
                 <div class="img-mother2">
-                    <img src="./img/img2.png" alt="description"/>
+                    <img src="./img/img2.png" alt="Imagen decorativa 2"/>
                 </div>
                 <button class="close-btn">✕</button>
                 <h2 class="letter-header">Querida Mami <br>Leina</h2>
@@ -34,13 +34,27 @@
                     <p>Hoy y siempre, quiero que sepas que te amo con todo mi ser. No hay palabras suficientes para expresar lo agradecido/a que estoy por tenerte en mi vida.</p>
                     <p>Feliz Día de la Madre, Leina Torres. Mami, mi debilidad. Que este día esté lleno de amor y alegría, porque tú mereces lo mejor del mundo.</p>
                 </div>
-                <p class="letter-footer">Con todo mi amor ING.Welinton Cabrera </parte>
+                <p class="letter-footer">Con todo mi amor, ING. Welinton Cabrera</p>
                 <div class="img-mother-rosa">
-                    <img src="./img/rosa.png" alt="description"/>
+                    <img src="./img/rosa.png" alt="Rosa"/>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const cardInner = document.querySelector('.card-inner');
+        const openBtn = document.querySelector('.open-btn');
+        const closeBtn = document.querySelector('.close-btn');
+
+        openBtn.addEventListener('click', () => {
+            cardInner.classList.add('is-flipped');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            cardInner.classList.remove('is-flipped');
+        });
+    </script>
 </body>
-<script src="./js/script.js"></script>
 </html>
+
